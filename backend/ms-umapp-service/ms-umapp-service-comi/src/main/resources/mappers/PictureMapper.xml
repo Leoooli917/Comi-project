@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.qihoo.corp.umapp.service.comi.dao.PictureMapper">
+
+    <resultMap id="PictureResult" type="net.qihoo.corp.ms.umapp.feign.comi.entity.model.ComiPicture">
+        <id column="id" property="id"/>
+        <id column="history_id" property="historyId"/>
+        <result column="choose_img" property="chooseImg"/>
+
+        <result column="user_name" property="userName"/>
+        <result column="story_id" property="storyId"/>
+        <result column="actor_id" property="actorId"/>
+        <result column="content" property="content"/>
+        <result column="prompt" property="prompt"/>
+        <result column="img_url" property="imgUrl"/>
+        <result column="status" property="status"/>
+        <result column="is_poster" property="isPoster"/>
+
+        <result column="update_time" property="updateTime"/>
+        <result column="login_time" property="loginTime"/>
+
+    </resultMap>
+
+
+
+</mapper>

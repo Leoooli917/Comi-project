@@ -1,0 +1,102 @@
+.single-column-layout {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      align-items: center;
+      height: 100%;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+  
+      .single-column-title {
+          font-family: Source Han Sans;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin-top: 24px;
+          font-variation-settings: "opsz" auto;
+          font-feature-settings: "kern" on;
+          color: #3D3D3D;
+      }
+  
+      .single-column-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 16px;
+          position: relative;
+          overflow: hidden; /* Ensure no overflow */
+  
+          .single-column-card-label {
+              height: 90px;
+              font-size: 18px !important;
+              font-weight: bold;
+              text-align: center;
+              line-height: 90px;
+              margin-right: 12px;
+              width: 21px;
+              font-size: 24px;
+              font-weight: bold;
+              letter-spacing: 0em;
+              font-variation-settings: "opsz" auto;
+              font-feature-settings: "kern" on;
+              color: #595959;
+          }
+  
+          .first-page {
+              position: relative;
+              border-radius: 4px;
+  
+              .first-page-tag {
+                  position: absolute;
+                  left: 0px;
+                  width: 48px;
+                  height: 48px;
+              }
+          }
+  
+          .single-column-card-img-bg {
+              position: relative;
+              border-radius: 8px;
+              background: rgba(0, 0, 0, 0.3);
+              box-sizing: border-box;
+              border: 4px solid;
+              border-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%) 2;
+  
+              .selceted-img {
+                  position: absolute;
+                  left: 2px;
+                  top: 2px;
+                  width: 15.05%;
+                  height: 11.04%;
+              }
+          }
+  
+          .loading {
+              border: 1px solid #D8D8D8;
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              img {
+                  width: 20px;
+                  height: 20px;
+              }
+          }
+  
+          .selceted-img-bg {
+              position: absolute;
+              right: -26px;
+              top: 33px;
+              width: 12px;
+              height: 24px;
+          }
+      }
+  
+      .hack {
+          overflow: visible !important;
+      }
+  }
+  

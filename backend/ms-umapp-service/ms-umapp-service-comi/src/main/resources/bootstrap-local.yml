@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ms-umapp-service-comi
+  profiles:
+    nacos:
+      domain: 10.224.148.126:23750
+      username: umapp
+      password: Umapp360
+      group: MS_UMAPP_GROUP
+      namespace: e1824dcb-5a50-4904-9112-55bc2f92ea1d
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${spring.profiles.nacos.domain}
+        enabled: true
+        username: ${spring.profiles.nacos.username}
+        password: ${spring.profiles.nacos.password}
+        group: ${spring.profiles.nacos.group}
+        namespace: ${spring.profiles.nacos.namespace}
+      config:
+        server-addr: ${spring.profiles.nacos.domain}
+        file-extension: yml
+        username: ${spring.profiles.nacos.username}
+        password: ${spring.profiles.nacos.password}
+        group: ${spring.profiles.nacos.group}
+        namespace: ${spring.profiles.nacos.namespace}
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+

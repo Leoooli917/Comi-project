@@ -1,0 +1,336 @@
+
+.main_container {
+    display: flex;
+    flex-direction: row;
+    background: #EBEBF0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.main_content {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+}
+
+.left_container {
+    width: 960px;
+    /* height: 1212px; */
+    border-radius: 8px;
+    background: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.headerView{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 864px;
+    margin: 0px auto;
+    margin-top: 24px;
+}
+
+.title_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: left;
+    font-family: Source Han Sans;
+    font-size: 40px;
+    font-weight: bold;
+    color: #3D3D3D;
+}
+
+.date_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.date_text {
+    font-family: Source Han Sans;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+}
+
+.view_count {
+    margin-left: 24px;
+    font-family: Source Han Sans;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+}
+
+.collect_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.star_contain {
+    margin-left: 16px;
+}
+
+.content_line {
+    margin: 0px auto;
+    margin-top: 13px;
+    width: 864px;
+    height: 0px;
+    opacity: 1;
+    border-top: 1px solid #D8D8D8;
+}
+
+
+.right_container {
+    margin-left: 40px;
+    width: 300px;
+    background: #EBEBF0;
+    display: flex;
+    flex-direction: column;
+}
+
+.author_container {
+    width: 100%;
+    border-radius: 4px;
+    opacity: 1;
+    background: #FFFFFF;
+}
+
+.author_content {
+    width: 100%;
+    height: 100%,
+}
+
+.top_decorate {
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
+    opacity: 1;
+    background: linear-gradient(90deg, #FD8972 -176%, #FD559B -63%, #9065FB 29%, #546BFD 99%);
+}
+
+.authorInfo {
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 194px;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.author_logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    color: white;
+    font-size: 36px;
+    line-height: 72px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.author_name {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.author_name .name {
+    height: 32px;
+    opacity: 1;
+    font-family: Source Han Sans;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+    text-align: left;
+}
+
+.author_name .articleNum {
+    display: flex;
+    flex-direction: row;
+}
+
+.author_name .articleNum .article {
+    height: 32px;
+    opacity: 1;
+    font-family: Source Han Sans;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+}
+
+.author_name .articleNum .article1 {
+    height: 32px;
+    opacity: 1;
+    font-family: Source Han Sans;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+}
+
+.author_content .middleLine {
+    margin-top: 21px;
+    margin-left: 25px;
+    width: 256px;
+    height: 0px;
+    opacity: 1;
+
+    /* 正文色/正文辅助色 */
+    border-top: 1px dashed #767676;
+}
+
+.product_list {
+    margin-left: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.product_list .product {
+    height: 36px;
+    font-family: Source Han Sans;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 36px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    /* Neutral/10 */
+    color: #262626;
+    text-align: left;
+    cursor: pointer;
+}
+
+.popular_container {
+    margin-top: 24px;
+    width: 300px;
+    border-radius: 4px;
+    opacity: 1;
+    background: #FFFFFF;
+}
+
+.rank_content {
+    width: 100%;
+}
+
+.rank_content .title {
+    margin-top: 12px;
+    margin-left: 24px;
+    height: 32px;
+    opacity: 1;
+
+    font-family: Source Han Sans;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+}
+
+.star_content {
+    
+    width: 100%;
+    height: 444px;
+    border-radius: 4px;
+    opacity: 1;
+    background: #FFFFFF;
+}
+
+.leftcontent_contain {
+    margin: 24px auto;
+    width: 864px;
+    /* height: 800px; */
+}
+
+.left_content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto; /* 自动显示滚动条 */
+}
+
+.image_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.image_content  .top_image {
+    /* width: 864px;
+    height: 432px; */
+    object-fit: contain;
+}
+
+.image_content .image_describe {
+    margin: 20px auto;
+    text-align: left;
+    width: 864px;
+    font-family: Source Han Sans;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0em;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+    word-wrap: break-word; /* 允许长单词换行 */
+    overflow-wrap: break-word; /* 标准属性 */
+}
+
+.CustomButtom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 12px;
+    background: #F4F4F4;
+    border: 1px solid #E4E4E4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.CustomButtom_logo {
+    width: 20px;
+    height: 20px;
+}
+
+.CustomButtom  .text {
+    margin-left: 6px;
+    font-family: Alibaba PuHuiTi 2.0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0px;
+
+    font-variation-settings: "opsz" auto;
+    /* Neutral/9 */
+    color: #434343;
+}
+

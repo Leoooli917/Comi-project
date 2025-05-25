@@ -1,0 +1,20 @@
+FROM harbor.qihoo.net/xny-ztzcb-finer-library/maven-3.8.4-openjdk-11:v0.0.3 AS builder
+# 使用 ARG 指令定义构建参数
+# 设置默认的环境变量值为 dev
+ARG ENVIRONMENT=dev
+# 设置工作目录
+WORKDIR /project
+COPY . /project
+RUN mvn clean install -T 10
+RUN mvn clean package -f /project/ms-umapp-service/ms-umapp-service-comi
+FROM harbor.qihoo.net/tyzcb-comiai-ms-comi/ms-comi-jre11:dev_comi-202404211015-5f2b47d
+# 创建 app 目录并设置时区
+WORKDIR /app
+# 复制构建阶段中生成的jar文件到容器中
+COPY --from=builder /project/ms-umapp-service/ms-umapp-service-comi/target/*.jar /app/ms-umapp-service-comi.jar
+COPY --from=builder /project/ms-umapp-service/ms-umapp-service-comi/src/main/resources/bootstrap-dev.yml /app/bootstrap-dev.yml
+COPY --from=builder /project/ms-umapp-service/ms-umapp-service-comi/src/main/resources/out/bootstrap-dev.yml /app/bootstrap.yml
+# 设置启动命令
+# CMD ["sh", "-c", "java -jar -Dspring.profiles.active=$ENVIRONMENT /app/ms-umapp-service-comi.jar"]
+EXPOSE 20790
+CMD ["java", "-jar", "-Dspring.profiles.active=dev", "/app/ms-umapp-service-comi.jar"]

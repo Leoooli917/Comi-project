@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.qihoo.corp.ms.umapp</groupId>
+        <artifactId>ms-umapp</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>net.qihoo.corp.ms.umapp.feign</groupId>
+    <artifactId>ms-umapp-feign</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>ms-umapp-feign</name>
+    <description>ms-umapp-feign</description>
+
+    <modules>
+        <module>ms-umapp-feign-user</module>
+        <module>ms-umapp-feign-auth</module>
+        <module>ms-umapp-feign-technology</module>
+        <module>ms-umapp-feign-todolist</module>
+        <module>ms-umapp-feign-sharebook</module>
+        <module>ms-umapp-feign-comi</module>
+        <module>ms-umapp-feign-anniversary</module>
+        <module>ms-umapp-feign-evaluate</module>
+    </modules>
+
+</project>

@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+    if(location.protocol == "https:"){
+        document.write('<script src="https://jspassport.ssl.qhimg.com/psp_jump_white_list.js"><\/script>');
+    }else{
+        document.write('<script src="http://js.passport.qihucdn.com/psp_jump_white_list.js"><\/script>');
+        }
+        </script>
+
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+        (function(){
+            var queryStr = location.search.substring(1).split('&'),oneQueryStr,args = {},g = parent,scope = parent ,callback, i, len;
+            for(i in queryStr){
+                oneQueryStr = queryStr[i].split('=');
+                if(!callback && oneQueryStr[0] == 'fun'){
+                    callback = oneQueryStr[1];
+                };
+                if(oneQueryStr[0]&&oneQueryStr[1]){
+                    args[oneQueryStr[0]] = (oneQueryStr[1]||'').replace(/[><'"{}]/g, '');
+                }
+
+            }
+                /*临时插入*/
+                var reg;
+                //函数名白名单，其他均认为非法
+                var filter = [
+                    //公用
+                    '^parent.parent.QHPass.getQuickLoginUserLength$',
+                    '^parent.parent.QHPass.ptLogin$',
+                    //v3版本
+                    '^window.opener.QHPass.thirdLoginSuccess$',
+                    '^parent.QHPass.mobileLoginUtils.mobileLoginSuccess$',
+                    '^parent.QHPass.regUtils.submitCallback$',
+                    '^parent.QHPass.nicknameUtils.submitCallback$',
+                    '^parent.QHPass.userNameUtils.submitCallback$',
+                    '^parent.QHPass.emailUtils.submitCallback$',
+                    '^parent.QHPass.bindCallback$',
+                    '^parent.QHPass.loginEmailUtils.sendCB$',
+                    '^parent.QHPass.bindMobileUtils.bindMobileSuccess$',
+                    //移动版
+                    '^parent.QHPass.regUtils.submitCB$',
+                    '^parent.QHPass.setnameUtils.setnameCallback$',
+                    //v5版本
+                    '^QiUserJsonp\\d+$'
+                    ];
+
+                //返回true的时候，说明触发规则，不允许通过
+                window.validateCallback = function(callback) {
+                    var flag = true;
+                    for (i = 0; i < filter.length; i++) {
+                        reg = new RegExp(filter[i], "i");
+                        if (reg.test(callback)) {
+                            flag = false;
+                        }
+                    }
+                    return flag;
+                };
+                /*临时插入*/
+        //过滤
+        if(typeof window.validateCallback != 'function' || (window.validateCallback && validateCallback(callback))) {
+            return;
+        }
+        callback = callback.split('.');
+        for(i = 0,len= callback.length;i<len;i++){
+            if(i==0 && callback[0]=="parent"){
+                g = parent;
+                scope = parent;
+            }else if(i==0 && callback[0]=="top"){
+                g = top;
+                scope = top;
+            }else{
+                if(i<len-1){
+                    scope = scope[callback[i]];
+                }
+                g = g[callback[i]];
+            }
+        }
+        g.call(scope,args);
+
+    })();
+    </script>
+</body>
+</html>

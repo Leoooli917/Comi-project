@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.qihoo.corp.ms.umapp</groupId>
+        <artifactId>ms-umapp</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>net.qihoo.corp.ms.umapp.common</groupId>
+    <artifactId>ms-umapp-common</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>ms-umapp-common</name>
+    <description>ms-umapp-common</description>
+
+    <modules>
+        <module>ms-umapp-common-util</module>
+        <module>ms-umapp-common-core</module>
+        <module>ms-umapp-common-feign</module>
+        <module>ms-umapp-common-mybatis</module>
+        <module>ms-umapp-common-redis</module>
+        <module>ms-umapp-common-login</module>
+        <module>ms-umapp-common-sentinel</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.qihoo.corp.ms.umapp</groupId>
+        <artifactId>ms-umapp</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>net.qihoo.corp.ms.umapp.user</groupId>
+    <artifactId>ms-umapp-user</artifactId>
+    <version>1.0.0</version>
+
+    <name>ms-umapp-user</name>
+    <description>ms-umapp-user</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.qihoo.corp.ms.umapp.common.redis</groupId>
+            <artifactId>ms-umapp-common-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.qihoo.corp.ms.umapp.common.core</groupId>
+            <artifactId>ms-umapp-common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.qihoo.corp.ms.umapp.common.util</groupId>
+            <artifactId>ms-umapp-common-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.qihoo.corp.ms.umapp.common.feign</groupId>
+            <artifactId>ms-umapp-common-feign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.qihoo.corp.ms.umapp.common.mybatis</groupId>
+            <artifactId>ms-umapp-common-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.qihoo.corp.ms.umapp.feign.user</groupId>
+            <artifactId>ms-umapp-feign-user</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

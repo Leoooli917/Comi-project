@@ -1,0 +1,113 @@
+.img-select-container {
+    width: 100%;
+    text-align: left;
+    // margin-top: 27px;
+    // margin-left: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #3D3D3D;
+    display: flex;
+    flex-direction: row;
+    // margin-left: 10px;
+    // margin-right: 22px;
+    flex-wrap: wrap;
+}
+
+.img-card-selected {
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    /* 边框渐变-1 */
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%) 2;
+}
+
+.img-card-selected,
+.img-card {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+    margin-top: 16px;
+    margin-left: 12px;
+    border: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.img-card-menoy {
+    position: absolute;
+    left: 0px;
+    top: 58px;
+    border-radius: 0 0 4px 4px !important;
+    width: 84px;
+    padding: 0 2px;
+    height: 26px;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    /* box-sizing: border-box; */
+    opacity: 1;
+    box-sizing: border-box;
+    /* 边框渐变-1 */
+    border-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%) 2;
+}
+
+.img-card-pic {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    opacity: 1;
+    box-sizing: border-box;
+    
+}
+.pic-selected {
+    position: relative;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border: 4px solid;
+    border-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%) 2;
+    +.img-card-menoy{
+        width: 76px !important;
+        left: 4px;
+        top: 58px;
+        height: 22px;
+    }
+}
+.img-card-selected-bg {
+    /* 矩形 60 */
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    /* background: linear-gradient(90deg, #54B7FD 2%, #596AFD 51%, #9065FB 92%, #FD559B 132%, #FE8874 197%), linear-gradient(90deg, #3BFFA0 5%, #3B89FF 100%); */
+
+}
+
+.img-card-selected-pic {
+    /* 路径 */
+
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 15.05%;
+    height: 11.04%;
+    opacity: 1;
+
+    /* Character/Primary(inverse) */
+    /* background: #FFFFFF; */
+}

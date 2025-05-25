@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ms-umapp-gateway
+  profiles:
+    active: prod
+  main:
+    allow-bean-definition-overriding: true

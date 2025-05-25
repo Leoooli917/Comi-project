@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.qihoo.corp.ms.umapp.user.dao.SysUserMapper">
+
+    <resultMap id="UserDetailsMap" type="net.qihoo.corp.ms.umapp.feign.user.entity.model.MsUmappAuthUserDetails">
+        <result column="id" property="id"/>
+        <result column="user_name" property="username"/>
+        <result column="password" property="password"/>
+        <result column="status" property="enabled"/>
+        <collection property="authorities"
+                    column="{userId = id}"
+                    javaType="java.util.ArrayList"
+                    ofType="java.lang.String"
+                    select="net.qihoo.corp.ms.umapp.user.dao.SysRoleMapper.findRoleCodesByUserId"/>
+    </resultMap>
+
+    <sql id="userInfoSql">
+        id
+        ,user_name,password,phone,email,user_header,real_name
+    </sql>
+
+    <!--批量添加用户-->
+    <insert id="addUserByList" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_user(user_name,password,phone,email,user_header,real_name,source,created_by,updated_by)
+        values
+        <foreach collection="userList" item="user" separator=",">
+            (
+            #{user.userName},
+            #{user.password},
+            #{user.phone},
+            #{user.email},
+            #{user.userHeader},
+            #{user.realName},
+            #{user.source},
+            #{user.createdBy},
+            #{user.updatedBy}
+            )
+        </foreach>
+    </insert>
+
+    <!--批量删除用户信息-->
+    <delete id="deleteUserList" parameterType="java.util.List">
+        delete from sys_user where id in
+        <foreach collection="userList" item="user" open="(" separator="," close=")">
+            #{user.id}
+        </foreach>
+    </delete>
+
+    <!--根据用户名获取用户信息-->
+    <select id="findByUserName" resultMap="UserDetailsMap">
+        select id,user_name,password,status
+        from sys_user
+        <where>
+            user_name = #{userName}
+        </where>
+        order by id desc limit 1
+    </select>
+
+    <select id="loadUserByPhone" resultType="net.qihoo.corp.ms.umapp.feign.user.entity.model.SysUser">
+        select u.user_name,u.phone,u.password
+        from sys_user u
+        <where>
+            u.phone = #{phone} and u.status = 1
+        </where>
+        order by u.id desc limit 1
+    </select>
+
+    <select id="loadUserByName" resultType="net.qihoo.corp.ms.umapp.feign.user.entity.model.SysUser">
+        select u.user_name,u.phone,u.password,u.real_name,u.id,u.user_header
+        from sys_user u
+        <where>
+            u.user_name = #{username} and u.status = 1
+        </where>
+        order by u.id desc limit 1
+    </select>
+
+    <!--获取系统中所有用户-->
+    <select id="getAllUsers" resultType="net.qihoo.corp.ms.umapp.feign.user.entity.model.SysUser">
+        select
+        <include refid="userInfoSql"/>
+        from sys_user
+        <where>
+            source = 1
+        </where>
+    </select>
+
+    <!--根据域名集合获取用户集合的方法-->
+    <select id="findUserListByUserNames" resultType="net.qihoo.corp.ms.umapp.feign.user.entity.model.SysUser">
+        select id,user_name,real_name
+        from sys_user where user_name in
+        <foreach collection="userListParams" item="user" open="(" separator="," close=")">
+            #{user.userName}
+        </foreach>
+    </select>
+
+    <!--根据用户主键获取用户账号、名字的方法-->
+    <select id="findUserByUserId" resultType="net.qihoo.corp.ms.umapp.feign.user.entity.model.SysUser">
+        select id,user_name,real_name
+        from sys_user
+        <where>
+            id = #{userId}
+        </where>
+    </select>
+</mapper>

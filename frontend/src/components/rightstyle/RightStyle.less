@@ -1,0 +1,236 @@
+.right-style-body {
+    width: 448px;
+    height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+
+
+    background: #FFFFFF;
+
+}
+
+.right-style-type-label {
+    text-align: left;
+    margin-top: 27px;
+    margin-left: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #3D3D3D;
+}
+
+.right-style-card-selected,
+.right-style-card {
+    position: relative;
+
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+
+    margin-top: 16px;
+    margin-left: 12px;
+    border: 2px;
+    box-sizing: border-box;
+
+}
+
+.right-style-card-selected {
+
+
+
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+    opacity: 1;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    box-sizing: border-box;
+    /* 边框渐变-1 */
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%) 2;
+
+
+
+
+}
+
+.right-style-types {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 22px;
+    flex-wrap: wrap;
+
+}
+
+.right-style-ratio-label {
+    // width: 100%;
+    text-align: left;
+    margin-left: 22px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 16px;
+
+    color: #3D3D3D;
+
+    z-index: 0;
+
+}
+
+.right-style-size-card,
+.right-style-size-card-selected {
+    /* 图片比例 */
+
+
+
+    width: 48px;
+    height: 64px;
+    border-radius: 4px;
+    opacity: 1;
+    position: relative;
+    /* 自动布局 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start !important;
+    padding-top: 12px;
+    flex: 1;
+    margin-left: 10px;
+    background: #FFFFFF;
+
+
+    box-sizing: border-box;
+    /* Neutral/5 */
+    border: 1px solid #D9D9D9;
+
+    z-index: 0;
+}
+
+.right-style-size-card-selected {
+    background: #F0F0F0;
+
+}
+
+.right-style-ratio-img {
+    max-width: 32px;
+    min-width: 8px;
+    max-height: 16px;
+    min-height: 9px;
+
+}
+
+.right-style-ratio-text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #3D3D3D;
+    position: absolute;
+    bottom: 10px;
+}
+
+.right-style-style-img {
+    width: 86px;
+    height: 86px;
+    border-radius: 4px;
+    opacity: 1;
+    box-sizing: border-box;
+
+
+}
+
+.right-style-menoy {
+    position: absolute;
+    left: 2px;
+    top: 62px;
+    border-radius: 0 0 6px 6px;
+    width: 85px;
+    height: 26px;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    /* box-sizing: border-box; */
+    border-radius: 6px;
+    opacity: 1;
+    box-sizing: border-box;
+
+    /* 边框渐变-1 */
+
+    border-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%) 2;
+}
+
+.style-selceted-img-bg {
+    /* 矩形 60 */
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+
+    /* background: linear-gradient(90deg, #54B7FD 2%, #596AFD 51%, #9065FB 92%, #FD559B 132%, #FE8874 197%), linear-gradient(90deg, #3BFFA0 5%, #3B89FF 100%); */
+
+}
+
+.style-selceted-img {
+    /* 路径 */
+
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 15.05%;
+    height: 11.04%;
+    opacity: 1;
+
+    /* Character/Primary(inverse) */
+    /* background: #FFFFFF; */
+}
+
+.right-style-next {
+
+    margin-top: 24px;
+    margin-left: 22px;
+    margin-right: 22px;
+    border-radius: 6px;
+    opacity: 1;
+    /* 自动布局 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* Primary/6 */
+    background: #1890FF;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0px;
+
+    /* Neutral/1 */
+    color: #FFFFFF;
+}
+
+.basicsButton {
+    background: linear-gradient(90deg, #FD8972 -176%, #FD559B -63%, #9065FB 29%, #546BFD 99%);
+    flex:1;
+    color: #FFFFFF;
+    border-radius: 4px;
+    height: 36px;
+
+    &:hover{
+        opacity: .8;
+    }
+}

@@ -1,0 +1,133 @@
+// General modal styling
+.ant-modal-header {
+    display: flex;
+}
+
+.ant-modal .ant-modal-title {
+    font-size: 18px;
+}
+
+.top-right-text {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'Source Han Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0em;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+    cursor: pointer;
+}
+
+// Placeholder for empty state
+.empty-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 450px; // Match the scroll container height in History Role
+    text-align: center;
+    color: #888; // Example color, adjust as needed
+    font-size: 16px; // Example font size
+    padding: 20px; // Padding to center content vertically
+}
+
+.empty-placeholder img {
+    width: 100px; // Adjust size as needed
+    height: auto;
+    margin-bottom: 20px; // Space between image and text
+}
+
+.private-role-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.private-name-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.story-time {
+    font-family: 'Source Han Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+}
+
+.loading-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 450px; // Same height as the scroll container
+    text-align: center;
+    font-family: 'Source Han Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
+    padding-top: 100px;
+}
+
+.loading-text img {
+    margin-bottom: 1px; // Space between the image and the text
+    width: 100px; // Size of the icon
+    height: 100px; // Size of the icon
+}
+
+// Image selection style
+.image-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; // Space between images
+    margin-top: 20px;
+}
+
+.image-select .image-card {
+    width: 150px; // Example size, adjust as needed
+    height: 200px; // Example size, adjust as needed
+    background-color: #f0f0f0; // Example background color
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.image-select .image-card:hover {
+    transform: scale(1.05);
+}
+
+.image-select .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-select .image-card .image-title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #3D3D3D;
+    text-align: center;
+}
+
+

@@ -1,0 +1,167 @@
+.layout-container {
+    .arco-layout {
+      overflow: hidden;
+      background-color: @base-content-bg-color;
+    }
+    .layout-header {
+      position: fixed;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px 32px 8px 40px;
+      border-bottom: 1px solid var(--color-border);
+      background-color: #FFF;
+      &-logo {
+        display: flex;
+        cursor: pointer;
+        width: 155px;
+        height: 40px;
+        background-image: url("https://p0.ssl.qhimg.com/t01090a4ac11309f528.png");
+        
+      }
+      &-back {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        margin-left: -24px;
+        background-image: url("https://p1.ssl.qhimg.com/t0112a5e7ba1e4f7934.png");
+        cursor:pointer;
+      }
+      &-right {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        // .layout-header-edit {
+        //   margin-right: 20px;
+        //   .arco-input-inner-wrapper {
+        //     border-radius: 30px;
+        //   }
+        // }
+        .step-button{
+          color: #fff;
+          background: linear-gradient(90deg, #FD8972 -176%, #FD559B -63%, #9065FB 29%, #546BFD 99%);
+          border: none;
+          &:hover{
+            border: none !important;
+            // background: #6067F1 !important;
+          }
+          &:focus-visible,&:focus{
+            outline: none;
+          }
+        }
+
+        .step-button-pre{
+          color: #fff;
+          background: linear-gradient(90deg, #FD8972 -176%, #FD559B -63%, #9065FB 29%, #546BFD 99%);
+          border: none;
+          opacity: 0.4;
+          &:hover{
+            border: none !important;
+            background: linear-gradient(90deg, #FD8972 -176%, #FD559B -63%, #9065FB 29%, #546BFD 99%) !important;
+            border: none !important;
+            opacity: 0.4 !important;
+          }
+          &:focus-visible,&:focus{
+            outline: none;
+          }
+        }
+      }
+      &-search {
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        .arco-input-inner-wrapper {
+          border-radius: 20px;
+          .arco-input {
+            margin-left:10px;
+          }
+        }
+      }
+      &-nav {
+        margin-left: 96px;
+        font-size:  16px;
+        color: #3D3D3D;
+        a{
+          color: inherit;
+        }
+      }
+      .storeTitle{
+        background-color: #FFF !important;
+        margin-left:25px;
+        color:#595959;
+        font-weight: 500;
+        input{
+          font-size: 20px;
+        }
+        .arco-input-inner-wrapper{
+          background-color: #FFF;
+          &-focus{
+            input{
+              font-size: 14px !important;
+            }
+          }
+        }
+      }
+    }
+    .sub-menu-icon .arco-icon {
+      font-size: 18px;
+      vertical-align: text-bottom;
+    }
+  
+    .layout-main-wrap {
+      padding-top: 57px;
+      .layout-content {
+        height: calc(100vh - 57px);
+        background-color: var(--color-bg-1);
+      }
+      .layout-content-breadcrumb {
+        // padding: @layout-main-padding;
+      }
+      .arco-layout-sider {
+        height: calc(100vh - 70px);
+      }
+      .layout-main-content {
+        height: calc(100% - 57px);
+        min-height: calc(100vh - 57px);
+      }
+      .arco-layout-sider-trigger {
+        float: right;
+        width: 30px !important;
+        height: 30px;
+        margin: 0 10px;
+        line-height: 30px;
+        color: var(--color-text-3);
+        background: var(--color-neutral-1);
+      }
+      .breadcrumb-icon {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: var(--color-text-3);
+        vertical-align: text-bottom;
+        .icon-separator {
+          width: 1rem;
+          margin-left: 10px;
+          color: var(--color-text-4);
+        }
+      }
+    }
+    .layout-footer {
+      min-height: 55px;
+      line-height: 55px;
+      color: var(--color-text-2);
+      text-align: center;
+      background-color: var(--color-fill-2);
+    }
+    
+  }
+  .avatar{
+    margin-left: 16px;
+    &:hover{
+      cursor: pointer;
+    }
+  }

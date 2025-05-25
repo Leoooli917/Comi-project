@@ -1,0 +1,162 @@
+.single-column-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .single-column-title {
+
+            font-family: Source Han Sans;
+
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-top: 24px;
+
+
+            font-variation-settings: "opsz" auto;
+            font-feature-settings: "kern" on;
+            color: #3D3D3D;
+
+      }
+
+      .single-column-card {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-left: 24px;
+
+            img {
+                  border-radius: 8px;
+            }
+
+
+            
+
+            .normal-page {
+
+                  position: relative;
+                  border-radius: 4px;
+                  opacity: 1;
+
+                  .poster-tag {
+                        position: absolute;
+                        left: 0px;
+
+                        width: 32px;
+                        height: 32px;
+                        opacity: 1;
+
+                  }
+
+            }
+
+            .single-column-card-img-bg {
+                  position: relative;
+                  border: 2px solid transparent;
+                  border-radius: 8px;
+                  background-clip: padding-box, border-box;
+                  background-origin: padding-box, border-box;
+                  background-image: linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%),
+                   linear-gradient(90deg, #54B7FD 2%, #596AFD 25%, #9065FB 53%, #FD559B 75%, #FE8874 98%);
+                
+
+                  // .selceted-img-bg {
+                  //       /* 矩形 60 */
+
+                  //       position: absolute;
+                  //       left: 0px;
+                  //       top: 0px;
+                  //       width: 24px;
+                  //       height: 24px;
+                  //       opacity: 1;
+
+                  //       /* background: linear-gradient(90deg, #54B7FD 2%, #596AFD 51%, #9065FB 92%, #FD559B 132%, #FE8874 197%), linear-gradient(90deg, #3BFFA0 5%, #3B89FF 100%); */
+
+                  // }
+
+                  // .selceted-img {
+                  //       /* 路径 */
+
+                  //       position: absolute;
+                  //       left: 2px;
+                  //       top: 2px;
+                  //       width: 15.05%;
+                  //       height: 11.04%;
+                  //       opacity: 1;
+
+                  //       /* Character/Primary(inverse) */
+                  //       /* background: #FFFFFF; */
+                  // }
+
+                  .poster-tag {
+                        position: absolute;
+                        left: 0px;
+
+                        width: 32px;
+                        height: 32px;
+                        opacity: 1;
+                  }
+            }
+
+            .loading {
+                  border: 1px solid #D8D8D8;
+                  border-radius: 8px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  img {
+                        width: 20px;
+                        height: 20px;
+                  }
+            }
+
+      }
+
+}
+.single-column-card-label {
+      position: absolute;
+      z-index: 999;
+      height: 90px;
+      opacity: 1;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 90px;
+      left:-5px;
+      top: 18px;
+
+      width: 21px;
+      font-size: 18px;
+      font-weight: bold;
+
+      letter-spacing: 0em;
+      font-variation-settings: "opsz" auto;
+      font-feature-settings: "kern" on;
+      /* Neutral/6 */
+      color: #595959;
+}
+.single-column-card-container{
+      position: relative
+}
+            .selceted-img-bg {
+                  /* 矩形 60 */
+
+                  position: absolute;
+                  right: -26px;
+                  top: 52px;
+                  width: 12px;
+                  height: 24px;
+                  opacity: 1;
+
+                  /* background: linear-gradient(90deg, #54B7FD 2%, #596AFD 51%, #9065FB 92%, #FD559B 132%, #FE8874 197%), linear-gradient(90deg, #3BFFA0 5%, #3B89FF 100%); */
+
+            }

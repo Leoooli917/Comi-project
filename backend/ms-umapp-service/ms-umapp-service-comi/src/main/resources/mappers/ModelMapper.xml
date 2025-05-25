@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.qihoo.corp.umapp.service.comi.dao.ModelMapper">
+
+    <resultMap id="ModelResult" type="net.qihoo.corp.ms.umapp.feign.comi.entity.model.ComiModel">
+    <id column="id" property="id"/>
+    <result column="model_name" property="modelName"/>
+    <result column="display_name" property="displayName"/>
+    <result column="is_active" property="isActive"/>
+    <result column="poster_image" property="posterImage"/>
+    <result column="prompt" property="prompt"/>
+    <result column="negative_prompt" property="negativePrompt"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="login_time" property="loginTime"/>
+
+    </resultMap>
+
+
+
+</mapper>
